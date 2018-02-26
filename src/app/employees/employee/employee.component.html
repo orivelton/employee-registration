@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="form-group">
-    <button class="btn btn-default" type="submit">
+    <button class="btn btn-default" type="submit" [disabled]="!employeeForm.valid">
       <i class="fa fa-floppy-o"></i>
       Submit
     </button>
