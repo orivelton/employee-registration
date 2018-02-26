@@ -1,3 +1,17 @@
-<p>
-  employee-list works!
-</p>
+<h6 class="text-center">Employee Register</h6>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let employee of employeeList">
+    <td>{{employee.name}}</td>
+    <td>{{employee.position}}</td>
+    <td>
+      <!-- Edit -->
+      <a class="btn" (click)="onEdit(employee)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <!-- Exclud -->
+      <a class="btn">
+        <i class="fa fa-trash-o" (click)="onDelete(employee.$key)"></i>
+      </a>
+    </td>
+  </tr>
+</table>

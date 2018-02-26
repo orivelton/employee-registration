@@ -25,7 +25,7 @@ export class EmployeeService {
     });
   }
 
-  updateEmploy(employee: Employee) {
+  updateEmployee(employee: Employee) {
     this.employeeList.update(employee.$key, {
       name: employee.name,
       position: employee.position,
