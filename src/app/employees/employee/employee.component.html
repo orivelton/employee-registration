@@ -1,3 +1,36 @@
-<p>
-  employee works!
-</p>
+<form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Full Name" required>
+  </div>
+
+  <div class="form-group">
+    <label>Position</label>
+    <input type="text" class="form-control" name="position" #position="ngModel" [(ngModel)]="employeeService.selectedEmployee.position" placeholder="Position">
+  </div>
+
+  <div class="form-group">
+    <label>Office</label>
+    <input type="text" class="form-control" name="office" #office="ngModel" [(ngModel)]="employeeService.selectedEmployee.office" placeholder="Office">
+  </div>
+
+  <div class="form-group">
+    <label>Salary</label>
+    <div class="input-group">
+      <div class="input-group-addon">
+        <i class="fa fa-dollar"></i>
+      </div>
+      <input type="text" class="form-control" name="salary" #salary="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary">
+    </div>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-default" type="submit">
+      <i class="fa fa-floppy-o"></i>
+      Submit
+    </button>
+    <button class="btn btn-default" type="button" (click)="resetForm(employeeForm)">
+      <i class="fa fa-repeat"></i>
+      Reset
+    </button>
+  </div>
+</form>
