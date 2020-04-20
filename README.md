@@ -1,6 +1,6 @@
 # Employee Register
 
-Employee registry is an application using Angular 5 and firebase.
+Employee registry is an application using Angular and firebase.
 
 You can create, edit, and delete
 
